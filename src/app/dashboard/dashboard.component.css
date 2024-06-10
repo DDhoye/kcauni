@@ -1,0 +1,13 @@
+
+
+
+.card-header img {
+    
+    width: 100%;
+    height: auto;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,78 @@
+{
+  "posts": [
+    {
+      "name": "Michael Rubin",
+      "admNo": "20/03527",
+      "course": "Bsc. Information Technology",
+      "email": "mcrubin@gmail.com",
+      "mobileNo": "0716243917",
+      "id": "23a1"
+    },
+    {
+      "id": "3a0f",
+      "name": "Mike Mulwa",
+      "admNo": "20/07665",
+      "course": "Economics",
+      "email": "muthokamike@gmail.com",
+      "mobileNo": "0728302035"
+    },
+    {
+      "id": "753c",
+      "name": "Muhito Kiarie",
+      "admNo": "20/00888",
+      "course": "Acturial Science",
+      "email": "mkiarie@gmail.com",
+      "mobileNo": "0713665489"
+    },
+    {
+      "name": "Mac Jones",
+      "admNo": "20/00987",
+      "course": "Software Development",
+      "email": "alanm64@gmail.com",
+      "mobileNo": "0717295800",
+      "id": "c132"
+    },
+    {
+      "name": "Fuhad Adenkule",
+      "admNo": "22/09876",
+      "course": "SnG",
+      "email": "fhdjams123@yahoo.uk",
+      "mobileNo": "0200987630",
+      "id": "7278"
+    },
+    {
+      "id": "9335",
+      "name": "George Wea",
+      "admNo": "20/009876",
+      "course": "Music and Arts",
+      "email": "georgewea@gmail.com",
+      "mobileNo": "011230987"
+    }
+  ],
+  "signup": [
+    {
+      "id": "6b32",
+      "name": "mose",
+      "email": "moses@123",
+      "mobile": 714225897,
+      "password": "moses@123"
+    },
+    {
+      "id": "5c1f",
+      "name": "Mike Mulwa",
+      "email": "mulwamike@gmail.com",
+      "mobile": 728302035,
+      "password": "mike@123"
+    },
+    {
+      "id": "1a43",
+      "name": "doc martin",
+      "email": "doc@123.com",
+      "mobile": 98765678909,
+      "password": "doc@123"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

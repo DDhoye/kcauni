@@ -1,0 +1,92 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Lecture List
+                <button class="btn btn-success float-end" (click)="add()" data-toggle="modal" data-target="#exampleModal">Add Lecture</button>&nbsp;
+              </h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table tabl-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Mobile No</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of alllecturedata; let id=index;">
+                      <td>{{id + 1}}</td>
+                      <td>{{data.payload.doc.data().name}}</td>
+                      <td>{{data.payload.doc.data().email}}</td>
+                      <td>{{data.payload.doc.data().mobileNo}}</td>
+                      <td class="buttons">
+                        <button class="btn btn-info" (click)="edit(data)" data-toggle="modal" data-target="#exampleModal">Edit</button>&nbsp;
+                        <button class="btn btn-danger" (click)="deletelec(data)">Delete</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div style="background:#ed4d4a;" class="modal-header">
+          <h4 style="color: #fff; margin-left: auto; margin-right: auto;" class="modal-title" id="exampleModalLabel">Lecture Management</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <div class="container mt-5">
+            <div class="card">
+              <div class="card-header">
+                <h4>Create Lecture</h4>
+              </div>
+              <div class="card-body">
+                <form [formGroup]="formValue">
+                  <div class="form-group">
+                    <label>Name:</label>
+                    <input formControlName="name" type="text" class="form-control" placeholder="Enter name">
+                    <small *ngIf="formValue.get('name')?.invalid && formValue.get('name')?.touched" class="text-danger">Name is required*</small>
+                  </div>
+                  <div class="form-group">
+                    <label>Email:</label>
+                    <input formControlName="email" type="email" class="form-control" placeholder="Enter email">
+                    <small *ngIf="formValue.get('email')?.invalid && formValue.get('email')?.touched" class="text-danger">Email is required*</small>
+                  </div>
+                  <div class="form-group">
+                    <label>Mobile No:</label>
+                    <input formControlName="mobileNo" type="text" class="form-control" placeholder="Enter mobile no">
+                    <small *ngIf="formValue.get('mobileNo')?.invalid && formValue.get('mobileNo')?.touched" class="text-danger">Mobile No is required*</small>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Footer -->
+        <div style="background: #ed4d4a;" class="modal-footer">
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+          <button *ngIf="showadd" type="button" (click)="addlecture()" [disabled]="formValue.invalid" class="btn btn-success">Add</button>
+          <button *ngIf="showupdate" type="button" (click)="update()" [disabled]="formValue.invalid" class="btn btn-success">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
